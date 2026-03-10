@@ -44,5 +44,3 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $content = curl_exec($ch);
 $data = json_decode($content, true);
 echo(nl2br(h(trim($data['choices'][0]['message']['content']))));
-echo "<pre>";
-print_r($data);
